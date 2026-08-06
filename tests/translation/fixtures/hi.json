@@ -1,0 +1,173 @@
+{
+  "target_language": "hi",
+  "texts": [
+    {
+      "messages": "على الرغم من أن المفاوضات استمرت أكثر من ست ساعات، رفض المندوبون الذين يمثلون الدول الصغرى التوقيع على اتفاق لا يعالج المخاوف التي أثيرت في ذلك الصباح.",
+      "source": "ar"
+    },
+    {
+      "messages": "لو كان الباحثون قد عايروا الأجهزة بشكل صحيح قبل بدء التجربة، لما ظهرت ربما القراءات الشاذة التي حيّرت الفريق بأكمله.",
+      "source": "ar"
+    },
+    {
+      "messages": "أُعيد أخيرًا فتح الجسر، الذي كان مغلقًا للإصلاح منذ أن ألحقت فيضانات الربيع الضرر بأساساته، أمام حركة المرور بعد أن أكد المهندسون أن الهيكل يستوفي جميع متطلبات السلامة.",
+      "source": "ar"
+    },
+    {
+      "messages": "Obwohl die Verhandlungen mehr als sechs Stunden gedauert hatten, weigerten sich die Delegierten, die die kleineren Nationen vertraten, ein Abkommen zu unterzeichnen, das die an jenem Morgen geäußerten Bedenken nicht berücksichtigte.",
+      "source": "de"
+    },
+    {
+      "messages": "Wenn die Forscher die Instrumente vor Beginn des Experiments korrekt kalibriert hätten, wären die anomalen Messwerte, die das gesamte Team verwirrten, vielleicht nie aufgetreten.",
+      "source": "de"
+    },
+    {
+      "messages": "Die Brücke, die seit den Frühjahrsüberschwemmungen, die ihr Fundament beschädigt hatten, für Reparaturen gesperrt war, wurde schließlich für den Verkehr wieder freigegeben, nachdem die Ingenieure bestätigt hatten, dass das Bauwerk alle Sicherheitsanforderungen erfüllte.",
+      "source": "de"
+    },
+    {
+      "messages": "Bien que les négociations aient duré plus de six heures, les délégués qui représentaient les petites nations ont refusé de signer un accord qui ne répondait pas aux préoccupations soulevées ce matin-là.",
+      "source": "fr"
+    },
+    {
+      "messages": "Si les chercheurs avaient correctement calibré les instruments avant le début de l'expérience, les relevés anormaux qui ont déconcerté toute l'équipe n'auraient peut-être jamais été observés.",
+      "source": "fr"
+    },
+    {
+      "messages": "Le pont, qui était fermé pour réparations depuis que les inondations printanières avaient endommagé ses fondations, a finalement été rouvert à la circulation après que les ingénieurs eurent confirmé que la structure répondait à toutes les exigences de sécurité.",
+      "source": "fr"
+    },
+    {
+      "messages": "Although the negotiations had continued for over six hours, the delegates who represented the smaller nations refused to sign an agreement that failed to address the concerns raised earlier that morning.",
+      "source": "en"
+    },
+    {
+      "messages": "If the researchers had calibrated the instruments correctly before the experiment began, the anomalous readings that puzzled the entire team might never have appeared in the first place.",
+      "source": "en"
+    },
+    {
+      "messages": "The bridge, which had been closed for repairs since the spring floods damaged its foundations, was finally reopened to traffic after engineers confirmed that the structure met all safety requirements.",
+      "source": "en"
+    },
+    {
+      "messages": "Aunque las negociaciones habían continuado durante más de seis horas, los delegados que representaban a las naciones más pequeñas se negaron a firmar un acuerdo que no abordara las preocupaciones planteadas esa misma mañana.",
+      "source": "es"
+    },
+    {
+      "messages": "Si los investigadores hubieran calibrado los instrumentos correctamente antes de que comenzara el experimento, las lecturas anómalas que desconcertaron a todo el equipo quizás nunca habrían aparecido.",
+      "source": "es"
+    },
+    {
+      "messages": "El puente, que había estado cerrado por reparaciones desde que las inundaciones de primavera dañaron sus cimientos, finalmente se reabrió al tráfico después de que los ingenieros confirmaran que la estructura cumplía con todos los requisitos de seguridad.",
+      "source": "es"
+    },
+    {
+      "messages": "Byenke negosyasyon yo te dire plis pase sis èdtan, delege ki t ap reprezante ti nasyon yo te refize siyen yon akò ki pa t adrese enkyetid ki te leve nan maten sa a.",
+      "source": "ht"
+    },
+    {
+      "messages": "Si chèchè yo te kalibre enstriman yo kòrèkteman anvan eksperyans lan te kòmanse, rezilta etranj ki te dekonsève tout ekip la petèt pa t ap janm parèt.",
+      "source": "ht"
+    },
+    {
+      "messages": "Pon an, ki te fèmen pou reparasyon depi inondasyon prentan yo te andomaje fondasyon li, te resi louvri ankò pou sikilasyon apre enjenyè yo te konfime estrikti a satisfè tout egzijans sekirite yo.",
+      "source": "ht"
+    },
+    {
+      "messages": "交渉は六時間以上続いたにもかかわらず、小国を代表する代表団は、その朝に提起された懸念に対応していない協定への署名を拒否した。",
+      "source": "ja"
+    },
+    {
+      "messages": "研究者たちが実験を始める前に機器を正しく較正していたら、チーム全体を困惑させた異常な測定値はそもそも現れなかったかもしれない。",
+      "source": "ja"
+    },
+    {
+      "messages": "春の洪水で基礎が損傷して以来、修理のため閉鎖されていたその橋は、技術者が構造がすべての安全要件を満たしていることを確認した後、ついに交通に対して再開された。",
+      "source": "ja"
+    },
+    {
+      "messages": "협상이 여섯 시간 넘게 계속되었음에도 불구하고, 소국들을 대표하는 대표단은 그날 아침 제기된 우려를 해결하지 못한 합의안에 서명하기를 거부했다.",
+      "source": "ko"
+    },
+    {
+      "messages": "연구자들이 실험을 시작하기 전에 장비를 정확하게 보정했더라면, 팀 전체를 당혹하게 만든 이상 수치는 애초에 나타나지 않았을지도 모른다.",
+      "source": "ko"
+    },
+    {
+      "messages": "봄철 홍수로 기초가 손상된 이후 보수를 위해 폐쇄되었던 그 다리는, 기술자들이 구조물이 모든 안전 요건을 충족한다고 확인한 후 마침내 차량 통행에 다시 개방되었다.",
+      "source": "ko"
+    },
+    {
+      "messages": "Chociaż negocjacje trwały ponad sześć godzin, delegaci reprezentujący mniejsze narody odmówili podpisania porozumienia, które nie uwzględniało obaw zgłoszonych tego ranka.",
+      "source": "pl"
+    },
+    {
+      "messages": "Gdyby naukowcy prawidłowo skalibrowali przyrządy przed rozpoczęciem eksperymentu, anomalne odczyty, które zdumiały cały zespół, mogłyby nigdy się nie pojawić.",
+      "source": "pl"
+    },
+    {
+      "messages": "Most, zamknięty na remont od czasu wiosennych powodzi, które uszkodziły jego fundamenty, został wreszcie otwarty dla ruchu, gdy inżynierowie potwierdzili, że konstrukcja spełnia wszystkie wymogi bezpieczeństwa.",
+      "source": "pl"
+    },
+    {
+      "messages": "Хотя переговоры продолжались более шести часов, делегаты, представлявшие небольшие государства, отказались подписывать соглашение, которое не учитывало опасения, высказанные тем утром.",
+      "source": "ru"
+    },
+    {
+      "messages": "Если бы исследователи правильно откалибровали приборы до начала эксперимента, аномальные показания, озадачившие всю команду, возможно, никогда бы не появились.",
+      "source": "ru"
+    },
+    {
+      "messages": "Мост, закрытый на ремонт с тех пор, как весенние наводнения повредили его опоры, был наконец открыт для движения после того, как инженеры подтвердили, что конструкция соответствует всем требованиям безопасности.",
+      "source": "ru"
+    },
+    {
+      "messages": "Embora as negociações tivessem durado mais de seis horas, os delegados que representavam as nações menores se recusaram a assinar um acordo que não abordasse as preocupações levantadas naquela manhã.",
+      "source": "pt"
+    },
+    {
+      "messages": "Se os pesquisadores tivessem calibrado corretamente os instrumentos antes do início do experimento, as leituras anômalas que intrigaram toda a equipe talvez nunca tivessem aparecido.",
+      "source": "pt"
+    },
+    {
+      "messages": "A ponte, que estava fechada para reparos desde que as enchentes da primavera danificaram suas fundações, foi finalmente reaberta ao tráfego depois que os engenheiros confirmaram que a estrutura atendia a todos os requisitos de segurança.",
+      "source": "pt"
+    },
+    {
+      "messages": "Bagama't tumagal nang mahigit anim na oras ang negosasyon, tumanggi ang mga delegadong kumakatawan sa mas maliliit na bansa na pumirma sa isang kasunduan na hindi tumutugon sa mga alalahaning ibinangon nang umagang iyon.",
+      "source": "tl"
+    },
+    {
+      "messages": "Kung tama sanang na-calibrate ng mga mananaliksik ang mga instrumento bago nagsimula ang eksperimento, malamang na hindi na lumitaw ang mga kakaibang resulta na nakalito sa buong koponan.",
+      "source": "tl"
+    },
+    {
+      "messages": "Ang tulay, na sarado para sa pagkukumpuni mula nang masira ng baha sa tagsibol ang mga pundasyon nito, ay muling binuksan sa trapiko matapos kumpirmahin ng mga inhinyero na natutugunan ng istraktura ang lahat ng kinakailangang pamantayan sa kaligtasan.",
+      "source": "tl"
+    },
+    {
+      "messages": "Mặc dù các cuộc đàm phán đã kéo dài hơn sáu giờ đồng hồ, các đại biểu đại diện cho những quốc gia nhỏ hơn vẫn từ chối ký một thỏa thuận không giải quyết được những mối lo ngại đã được nêu ra vào sáng hôm đó.",
+      "source": "vi"
+    },
+    {
+      "messages": "Nếu các nhà nghiên cứu đã hiệu chỉnh thiết bị đúng cách trước khi thí nghiệm bắt đầu, thì có lẽ những số liệu bất thường khiến cả nhóm bối rối đã không bao giờ xuất hiện.",
+      "source": "vi"
+    },
+    {
+      "messages": "Cây cầu, vốn đã bị đóng cửa để sửa chữa kể từ khi lũ lụt mùa xuân làm hư hại nền móng của nó, cuối cùng đã được mở lại cho giao thông sau khi các kỹ sư xác nhận rằng công trình đáp ứng mọi yêu cầu an toàn.",
+      "source": "vi"
+    },
+    {
+      "messages": "尽管谈判已经持续了六个多小时，代表较小国家的代表们仍然拒绝签署一项没有解决当天早上提出的担忧的协议。",
+      "source": "zh"
+    },
+    {
+      "messages": "如果研究人员在实验开始之前正确校准了仪器，那么困扰整个团队的异常读数或许根本就不会出现。",
+      "source": "zh"
+    },
+    {
+      "messages": "这座桥自春季洪水破坏其地基以来一直因维修而关闭，在工程师确认该结构符合所有安全要求后，终于重新开放通车。",
+      "source": "zh"
+    }
+  ]
+}
