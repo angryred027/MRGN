@@ -1,0 +1,3 @@
+.root {
+  background-color: var(--mui-palette-action-hover, rgba(0, 0, 0, 0.04));
+}

@@ -1,0 +1,40 @@
+.headerText {
+  text-align: center;
+}
+
+.dateLabel {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.subtitleLabel {
+  color: var(--mui-palette-warning-main, #ed6c02);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.noteField {
+  flex: 1;
+  padding: 0 calc(var(--mui-spacing, 8px) * 2.5) calc(var(--mui-spacing, 8px) * 2.5);
+  display: flex;
+}
+
+.noteField :global(.MuiInputBase-root) {
+  flex: 1;
+  align-items: flex-start;
+}
+
+.noteField :global(.MuiInput-root:before),
+.noteField :global(.MuiInput-root:after) {
+  content: none !important;
+  border-bottom: none !important;
+}
+
+.noteField :global(textarea),
+.noteField :global(input) {
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
