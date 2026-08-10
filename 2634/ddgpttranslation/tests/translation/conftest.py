@@ -6,6 +6,7 @@ import pytest
 
 HERE = Path(__file__).parent
 FIXTURES_DIR = HERE / "fixtures"
+ARTIFACTS_OUTPUT_DIR = HERE.parent / "artifacts" / "translation" / "output"
 
 BASE_URL = "http://localhost:5005"
 API_VERSION = "/api/v1"
@@ -54,3 +55,9 @@ def pytest_generate_tests(metafunc):
 @pytest.fixture()
 def fixture_case(fixture_language: str) -> dict:
     return load_fixture(fixture_language)
+
+
+@pytest.fixture(scope="session")
+def artifacts_output_dir() -> Path:
+    ARTIFACTS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    return ARTIFACTS_OUTPUT_DIR
