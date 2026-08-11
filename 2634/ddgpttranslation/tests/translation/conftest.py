@@ -61,3 +61,9 @@ def fixture_case(fixture_language: str) -> dict:
 def artifacts_output_dir() -> Path:
     ARTIFACTS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     return ARTIFACTS_OUTPUT_DIR
+
+
+@pytest.fixture(scope="session")
+def supported_languages() -> list[str]:
+    data = json.loads((HERE / "languages.json").read_text(encoding="utf-8"))
+    return data["supported_languages"]
