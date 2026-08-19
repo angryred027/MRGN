@@ -25,8 +25,11 @@ export function useCameraStream({
 }: UseCameraStreamOptions) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const trackRef = useRef<MediaStreamTrack | null>(null)
+  const streamRef = useRef<MediaStream | null>(null)
+  const devicesRef = useRef<MediaDeviceInfo[]>([])
 
   const [facingMode, setFacingMode] = useState<FacingMode>(initialFacingMode)
+  const [deviceId, setDeviceId] = useState<string | null>(null)
   const [canSwitchFacing, setCanSwitchFacing] = useState(false)
   const [torchSupported, setTorchSupported] = useState(false)
   const [torchOn, setTorchOn] = useState(false)
@@ -34,33 +37,51 @@ export function useCameraStream({
   const [zoom, setZoomState] = useState(1)
 
   useEffect(() => {
-    if (!active) return
+    if (!active) {
+      streamRef.current?.getTracks().forEach((track) => track.stop())
+      streamRef.current = null
+      trackRef.current = null
+      return
+    }
 
     let cancelled = false
-    let stream: MediaStream | undefined
+    // Keep the outgoing stream alive until the incoming one is attached, so the
+    // <video> element always has live frames to show instead of going black
+    // while the new device negotiates.
+    const previousStream = streamRef.current
 
-    navigator.mediaDevices
-      .getUserMedia({
-        video: {
+    const videoConstraints: MediaTrackConstraints = deviceId
+      ? {
+          deviceId: { exact: deviceId },
+          width: { ideal: width },
+          height: { ideal: height },
+          frameRate: { ideal: frameRate },
+        }
+      : {
           facingMode,
           width: { ideal: width },
           height: { ideal: height },
           frameRate: { ideal: frameRate },
-        },
-      })
+        }
+
+    navigator.mediaDevices
+      .getUserMedia({ video: videoConstraints })
       .then(async (mediaStream) => {
         if (cancelled) {
           mediaStream.getTracks().forEach((track) => track.stop())
           return
         }
 
-        stream = mediaStream
+        streamRef.current = mediaStream
         const [track] = mediaStream.getVideoTracks()
         trackRef.current = track ?? null
 
         if (videoRef.current) {
           videoRef.current.srcObject = mediaStream
         }
+
+        // Only release the old device now that the new stream is live on screen.
+        previousStream?.getTracks().forEach((track) => track.stop())
 
         const capabilities = track?.getCapabilities?.() ?? {}
         setTorchSupported(Boolean(capabilities.torch))
@@ -70,21 +91,37 @@ export function useCameraStream({
 
         const devices = await navigator.mediaDevices.enumerateDevices()
         if (!cancelled) {
-          setCanSwitchFacing(devices.filter((device) => device.kind === 'videoinput').length > 1)
+          const videoInputs = devices.filter((device) => device.kind === 'videoinput')
+          devicesRef.current = videoInputs
+          setCanSwitchFacing(videoInputs.length > 1)
         }
       })
       .catch(() => {})
 
     return () => {
       cancelled = true
-      trackRef.current = null
-      stream?.getTracks().forEach((track) => track.stop())
     }
-  }, [active, facingMode, width, height, frameRate])
+  }, [active, facingMode, deviceId, width, height, frameRate])
+
+  useEffect(
+    () => () => {
+      streamRef.current?.getTracks().forEach((track) => track.stop())
+    },
+    [],
+  )
 
   const toggleFacing = useCallback(() => {
+    const devices = devicesRef.current
+    if (devices.length > 1) {
+      const currentId = trackRef.current?.getSettings?.().deviceId ?? deviceId
+      const currentIndex = devices.findIndex((device) => device.deviceId === currentId)
+      const next = devices[(currentIndex + 1) % devices.length]
+      if (next) setDeviceId(next.deviceId)
+      return
+    }
+    setDeviceId(null)
     setFacingMode((prev) => (prev === 'environment' ? 'user' : 'environment'))
-  }, [])
+  }, [deviceId])
 
   const toggleTorch = useCallback(() => {
     const track = trackRef.current

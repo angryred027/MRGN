@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
-import Paper from '@mui/material/Paper'
 import clsx from 'clsx'
+import { GlassContainer } from './GlassContainer'
 import styles from './CardShell.module.css'
 
 interface CardShellProps {
@@ -11,6 +11,7 @@ interface CardShellProps {
   active?: boolean
   contentPadded?: boolean
   minHeight?: number | string
+  maxHeight?: number | string
 }
 
 export default function CardShell({
@@ -21,17 +22,22 @@ export default function CardShell({
   active = true,
   contentPadded = false,
   minHeight = 420,
+  maxHeight,
 }: CardShellProps) {
   return (
-    <Paper elevation={0} className={clsx(styles.root, active && styles.active)}>
-      <div className={clsx(styles.header, contentPadded && styles.headerPadded)}>
-        {leftAction}
-        {centerContent}
-        {rightAction}
-      </div>
-      <div className={clsx(styles.content, contentPadded && styles.contentPadded)} style={{ minHeight }}>
+    <GlassContainer
+      className={clsx(styles.root, active && styles.active)}
+      title={
+        <div className={clsx(styles.header, contentPadded && styles.headerPadded)}>
+          {leftAction}
+          {centerContent}
+          {rightAction}
+        </div>
+      }
+    >
+      <div className={clsx(styles.content, contentPadded && styles.contentPadded)} style={{ minHeight, maxHeight }}>
         {children}
       </div>
-    </Paper>
+    </GlassContainer>
   )
 }

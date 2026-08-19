@@ -1,6 +1,8 @@
 .root {
   position: fixed;
   inset: 0;
+  height: 100vh;
+  height: 100dvh;
   z-index: 1400;
   background-color: #000;
   overflow: hidden;

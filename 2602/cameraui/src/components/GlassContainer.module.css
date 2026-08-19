@@ -1,0 +1,83 @@
+.glassContainer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: calc(var(--mui-shape-borderRadius, 4px) * 6);
+  background-color: var(--mui-palette-background-paper, rgba(255, 255, 255, 0.6));
+}
+
+.filter,
+.overlay,
+.specular {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.filter {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+.clear .filter {
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+}
+
+.overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.05) 40%, rgba(255, 255, 255, 0.12));
+}
+
+.noNoise .overlay {
+  background-image: linear-gradient(160deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.05) 40%, rgba(255, 255, 255, 0.12));
+}
+
+.specular {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.solid {
+  border: 1px solid var(--mui-palette-divider, rgba(255, 255, 255, 0.3));
+}
+
+.none {
+  border: none;
+}
+
+.glassContainer > section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.glassContainer > section > header {
+  display: block;
+  color: var(--mui-palette-text-primary, #1a1a1a);
+  text-transform: capitalize;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.glassContainer > section > main {
+  display: block;
+  margin-bottom: auto;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.glassContainer > section > footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}

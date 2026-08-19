@@ -63,7 +63,25 @@ export default function PhotoNoteCard({
         multiline
         variant="standard"
         fullWidth
-        slotProps={{ input: { disableUnderline: true } }}
+        slotProps={{
+          input: {
+            disableUnderline: true,
+            style: { flex: 1, position: 'relative' },
+          },
+          htmlInput: {
+            style: {
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              resize: 'none',
+              border: 'none',
+              outline: 'none',
+              boxShadow: 'none',
+              background: 'transparent',
+            },
+          },
+        }}
         className={styles.noteField}
       />
     </CardShell>
