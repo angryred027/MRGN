@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import clsx from 'clsx'
 import IconButton from '@mui/material/IconButton'
 import CloseRounded from '@mui/icons-material/CloseRounded'
 import PhotoCameraRounded from '@mui/icons-material/PhotoCameraRounded'
@@ -7,6 +6,7 @@ import PhotoLibraryRounded from '@mui/icons-material/PhotoLibraryRounded'
 import CardShell from './CardShell'
 import RoundIconButton from './RoundIconButton'
 import FullScreenCamera from './FullScreenCamera'
+import { useCameraStream } from './useCameraStream'
 import styles from './CameraCaptureCard.module.css'
 
 interface CameraCaptureCardProps {
@@ -30,6 +30,26 @@ export default function CameraCaptureCard({
   const [photoSrc, setPhotoSrc] = useState<string | null>(null)
   const [isCameraOpen, setIsCameraOpen] = useState(false)
 
+  const {
+    videoRef,
+    canSwitchFacing,
+    toggleFacing,
+    torchSupported,
+    torchOn,
+    toggleTorch,
+    zoomRange,
+    zoom,
+    setZoom,
+    focusAt,
+    captureFrame,
+  } = useCameraStream({
+    active: !photoSrc,
+    initialFacingMode,
+    width: resolution?.width,
+    height: resolution?.height,
+    frameRate: resolution?.frameRate,
+  })
+
   const handlePickFromLibrary = () => {
     fileInputRef.current?.click()
   }
@@ -52,10 +72,21 @@ export default function CameraCaptureCard({
     }
   }
 
-  const handleCaptured = (src: string) => {
-    setPhotoSrc(src)
-    setIsCameraOpen(false)
-    onPhotoReady?.(src)
+  const handleCapture = () => {
+    const src = captureFrame()
+    if (src) {
+      setPhotoSrc(src)
+      setIsCameraOpen(false)
+      onPhotoReady?.(src)
+    }
+  }
+
+  const handlePreviewClick = () => {
+    if (photoSrc) {
+      // Discard the current photo so the live stream reactivates for retaking.
+      setPhotoSrc(null)
+    }
+    setIsCameraOpen(true)
   }
 
   return (
@@ -69,7 +100,7 @@ export default function CameraCaptureCard({
         </RoundIconButton>
       }
       centerContent={
-        <IconButton onClick={() => setIsCameraOpen(true)} className={styles.captureButton}>
+        <IconButton onClick={handleCapture} className={styles.captureButton}>
           <PhotoCameraRounded fontSize="medium" />
         </IconButton>
       }
@@ -80,25 +111,24 @@ export default function CameraCaptureCard({
       }
     >
       <div
-        className={clsx(styles.previewArea, !photoSrc && styles.previewAreaTappable)}
-        onClick={!photoSrc ? () => setIsCameraOpen(true) : undefined}
-        onKeyDown={
-          !photoSrc
-            ? (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  event.preventDefault()
-                  setIsCameraOpen(true)
-                }
-              }
-            : undefined
-        }
-        role={!photoSrc ? 'button' : undefined}
-        tabIndex={!photoSrc ? 0 : undefined}
+        className={styles.previewArea}
+        onClick={handlePreviewClick}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            handlePreviewClick()
+          }
+        }}
+        role="button"
+        tabIndex={0}
       >
         {photoSrc ? (
           <img className={styles.previewMedia} src={photoSrc} alt="Captured" />
         ) : (
-          <span className={styles.placeholder}>Tap to take a photo</span>
+          // Only mount this <video> while the full-screen view isn't also mounted -
+          // both share one videoRef from the same hook instance, and two elements
+          // can't both hold that live at once.
+          !isCameraOpen && <video ref={videoRef} autoPlay muted playsInline className={styles.previewMedia} />
         )}
       </div>
       <input
@@ -110,10 +140,18 @@ export default function CameraCaptureCard({
       />
       {isCameraOpen && (
         <FullScreenCamera
-          initialFacingMode={initialFacingMode}
-          resolution={resolution}
+          videoRef={videoRef}
           onClose={() => setIsCameraOpen(false)}
-          onCapture={handleCaptured}
+          onCapture={handleCapture}
+          canSwitchFacing={canSwitchFacing}
+          toggleFacing={toggleFacing}
+          torchSupported={torchSupported}
+          torchOn={torchOn}
+          toggleTorch={toggleTorch}
+          zoomRange={zoomRange}
+          zoom={zoom}
+          setZoom={setZoom}
+          focusAt={focusAt}
         />
       )}
     </CardShell>

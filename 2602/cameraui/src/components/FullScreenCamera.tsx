@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import type { Ref } from 'react'
 import { createPortal } from 'react-dom'
 import IconButton from '@mui/material/IconButton'
 import Slider from '@mui/material/Slider'
@@ -6,15 +7,28 @@ import CloseRounded from '@mui/icons-material/CloseRounded'
 import FlashOnRounded from '@mui/icons-material/FlashOnRounded'
 import FlashOffRounded from '@mui/icons-material/FlashOffRounded'
 import FlipCameraIosRounded from '@mui/icons-material/FlipCameraIosRounded'
-import { useCameraStream } from './useCameraStream'
 import ShutterButton from './ShutterButton'
 import styles from './FullScreenCamera.module.css'
 
+interface ZoomRange {
+  min: number
+  max: number
+  step: number
+}
+
 interface FullScreenCameraProps {
+  videoRef: Ref<HTMLVideoElement>
   onClose: () => void
-  onCapture: (src: string) => void
-  initialFacingMode?: 'user' | 'environment'
-  resolution?: { width?: number; height?: number; frameRate?: number }
+  onCapture: () => void
+  canSwitchFacing: boolean
+  toggleFacing: () => void
+  torchSupported: boolean
+  torchOn: boolean
+  toggleTorch: () => void
+  zoomRange: ZoomRange | null
+  zoom: number
+  setZoom: (value: number) => void
+  focusAt: (x: number, y: number) => void
 }
 
 interface FocusPoint {
@@ -24,31 +38,19 @@ interface FocusPoint {
 }
 
 export default function FullScreenCamera({
+  videoRef,
   onClose,
   onCapture,
-  initialFacingMode = 'environment',
-  resolution,
+  canSwitchFacing,
+  toggleFacing,
+  torchSupported,
+  torchOn,
+  toggleTorch,
+  zoomRange,
+  zoom,
+  setZoom,
+  focusAt,
 }: FullScreenCameraProps) {
-  const {
-    videoRef,
-    canSwitchFacing,
-    toggleFacing,
-    torchSupported,
-    torchOn,
-    toggleTorch,
-    zoomRange,
-    zoom,
-    setZoom,
-    focusAt,
-    captureFrame,
-  } = useCameraStream({
-    active: true,
-    initialFacingMode,
-    width: resolution?.width,
-    height: resolution?.height,
-    frameRate: resolution?.frameRate,
-  })
-
   const [focusPoint, setFocusPoint] = useState<FocusPoint | null>(null)
   const focusTimeoutRef = useRef<number | undefined>(undefined)
 
@@ -62,11 +64,6 @@ export default function FullScreenCamera({
     window.clearTimeout(focusTimeoutRef.current)
     setFocusPoint({ left, top, key: Date.now() })
     focusTimeoutRef.current = window.setTimeout(() => setFocusPoint(null), 700)
-  }
-
-  const handleCapture = () => {
-    const dataUrl = captureFrame()
-    if (dataUrl) onCapture(dataUrl)
   }
 
   return createPortal(
@@ -114,7 +111,7 @@ export default function FullScreenCamera({
             />
           </div>
         )}
-        <ShutterButton onCapture={handleCapture} />
+        <ShutterButton onCapture={onCapture} />
       </div>
     </div>,
     document.body,
