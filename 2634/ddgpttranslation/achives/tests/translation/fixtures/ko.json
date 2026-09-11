@@ -1,0 +1,173 @@
+{
+  "target_language": "ko",
+  "texts": [
+    {
+      "messages": "وصل الدكتور ج. ر. ألفاريز الساعة 9:30 صباحًا بالضبط. سألت: «هل التقرير جاهز؟» وهي تنظر إلى السيد تشين. لم يكن جاهزًا... ولا حتى قريبًا من ذلك.",
+      "source": "ar"
+    },
+    {
+      "messages": "نما الناتج المحلي الإجمالي بنسبة 3.2٪ في الربع الماضي، متجاوزًا توقعات 2.8٪. وصفه المحللون بأنه «قوي بشكل مفاجئ»... لكنهم حذروا من مخاطر. هل سيستمر ذلك؟",
+      "source": "ar"
+    },
+    {
+      "messages": "يرجى مراجعة البنود 1 و2 و3 قبل يوم الجمعة (أي بحلول نهاية اليوم). ملاحظة: الميزانية والموظفون والجدول الزمني مترابطة؛ أي تأخير في أحدها يؤثر على البقية. أسئلة؟ راسلوا الأستاذ ك. أوسي.",
+      "source": "ar"
+    },
+    {
+      "messages": "Dr. J. R. Álvarez kam pünktlich um 9:30 Uhr an. „Ist der Bericht fertig?\", fragte sie und sah Hrn. Chen an. War er nicht... nicht mal annähernd.",
+      "source": "de"
+    },
+    {
+      "messages": "Das BIP wuchs im letzten Quartal um 3,2 %, mehr als die Prognose von 2,8 %. Analysten nannten es „überraschend stark\"... warnten jedoch vor Risiken. Wird das anhalten?",
+      "source": "de"
+    },
+    {
+      "messages": "Bitte prüfen Sie die Punkte 1, 2 und 3 vor Fr. (d. h. bis Tagesende). Hinweis: Budget, Personal und Zeitplan hängen zusammen; eine Verzögerung bei einem wirkt sich auf die anderen aus. Fragen? Schreiben Sie an Prof. K. Osei.",
+      "source": "de"
+    },
+    {
+      "messages": "Le Dr J. R. Álvarez est arrivé à 9h30 précises. « Le rapport est-il prêt ? » a-t-elle demandé en regardant M. Chen. Il ne l'était pas... loin de là.",
+      "source": "fr"
+    },
+    {
+      "messages": "Le PIB a augmenté de 3,2 % le trimestre dernier, dépassant la prévision de 2,8 %. Les analystes ont jugé cela « étonnamment solide »... tout en avertissant des risques. Cela va-t-il durer ?",
+      "source": "fr"
+    },
+    {
+      "messages": "Merci de vérifier les points 1, 2 et 3 avant vendredi (c.-à-d. avant la fin de journée). Remarque : le budget, le personnel et le calendrier sont liés ; un retard sur l'un affecte les autres. Des questions ? Écrivez au Pr K. Osei.",
+      "source": "fr"
+    },
+    {
+      "messages": "Dr. J. R. Alvarez arrived at 9:30 a.m. sharp. \"Is the report ready?\" she asked, glancing at Mr. Chen. It wasn't -- not even close.",
+      "source": "en"
+    },
+    {
+      "messages": "The GDP grew 3.2% last quarter, beating the 2.8% forecast. Analysts at J.P. Morgan called it \"surprisingly strong\"... but warned of risks ahead. Will it last?",
+      "source": "en"
+    },
+    {
+      "messages": "Please review items 1, 2, and 3 before Fri. (i.e., by end of day). Note: the budget, staffing, and timeline are linked; delays in one affect the others. Questions? Email Prof. K. Osei.",
+      "source": "en"
+    },
+    {
+      "messages": "El Dr. J. R. Álvarez llegó a las 9:30 a.m. en punto. \"¿Está listo el informe?\", preguntó mirando al Sr. Chen. No lo estaba... ni de cerca.",
+      "source": "es"
+    },
+    {
+      "messages": "El PIB creció un 3,2% el trimestre pasado, superando el pronóstico del 2,8%. Los analistas lo calificaron de \"sorprendentemente sólido\"... pero advirtieron de riesgos. ¿Durará?",
+      "source": "es"
+    },
+    {
+      "messages": "Revise los puntos 1, 2 y 3 antes del vie. (es decir, antes de fin de día). Nota: el presupuesto, el personal y el cronograma están vinculados; un retraso en uno afecta a los demás. ¿Dudas? Escriba a la Prof. K. Osei.",
+      "source": "es"
+    },
+    {
+      "messages": "डॉ. जे. आर. अल्वारेज़ ठीक सुबह 9:30 बजे पहुँचीं। उन्होंने श्री चेन की ओर देखते हुए पूछा, \"क्या रिपोर्ट तैयार है?\" वह तैयार नहीं थी... बिल्कुल भी नहीं।",
+      "source": "hi"
+    },
+    {
+      "messages": "पिछली तिमाही में जीडीपी 3.2% बढ़ी, जो 2.8% के अनुमान से अधिक थी। विश्लेषकों ने इसे \"आश्चर्यजनक रूप से मजबूत\" बताया... लेकिन जोखिमों की चेतावनी भी दी। क्या यह बना रहेगा?",
+      "source": "hi"
+    },
+    {
+      "messages": "कृपया शुक्र. (यानी दिन के अंत) से पहले बिंदु 1, 2 और 3 की समीक्षा करें। नोट: बजट, स्टाफिंग और समयसीमा आपस में जुड़े हैं; एक में देरी से बाकी प्रभावित होते हैं। प्रश्न? प्रो. के. ओसेई को लिखें।",
+      "source": "hi"
+    },
+    {
+      "messages": "Doktè J. R. Alvarez te rive egzakteman 9:30 nan maten. Li te gade Mesye Chen epi mande, \"Rapò a pare?\" Li pa t pare... li te lwen sa.",
+      "source": "ht"
+    },
+    {
+      "messages": "PIB la te grandi 3.2% nan dènye trimès la, pi wo pase previzyon 2.8% la. Analis yo te rele sa \"fò yon fason ki sezi\"... men yo te avèti sou risk yo. Èske sa ap kontinye?",
+      "source": "ht"
+    },
+    {
+      "messages": "Tanpri revize atik 1, 2, ak 3 anvan vandredi (sa vle di, anvan fen jounen an). Nòt: bidjè a, pèsonèl la, ak orè a makonnen; reta nan youn afekte lòt yo. Kesyon? Voye imèl bay Pwofesè K. Osei.",
+      "source": "ht"
+    },
+    {
+      "messages": "博士（J. R. Alvarez）は午前9時30分ちょうどに到着した。彼女はチェン氏を見て「報告書は準備できていますか？」と尋ねた。できていなかった……それどころではなかった。",
+      "source": "ja"
+    },
+    {
+      "messages": "前四半期のGDPは3.2%成長し、2.8%という予想を上回った。アナリストはこれを「驚くほど好調」と評した……が、リスクにも警鐘を鳴らした。この勢いは続くのだろうか？",
+      "source": "ja"
+    },
+    {
+      "messages": "金曜日（つまり本日終業まで）までに項目1、2、3を確認してください。注：予算、人員配置、スケジュールは互いに関連しており、いずれかの遅れが他に影響します。ご質問は？オセイ教授（K. Osei）までご連絡ください。",
+      "source": "ja"
+    },
+    {
+      "messages": "Dr J. R. Álvarez przyjechała punktualnie o 9:30. „Czy raport jest gotowy?\" — zapytała, patrząc na p. Chena. Nie był gotowy... nawet blisko.",
+      "source": "pl"
+    },
+    {
+      "messages": "PKB wzrósł o 3,2% w ostatnim kwartale, przewyższając prognozę 2,8%. Analitycy nazwali to „zaskakująco mocnym wynikiem\"... ostrzegając jednak przed ryzykiem. Czy to się utrzyma?",
+      "source": "pl"
+    },
+    {
+      "messages": "Proszę sprawdzić punkty 1, 2 i 3 przed pt. (tj. do końca dnia). Uwaga: budżet, kadry i harmonogram są powiązane; opóźnienie w jednym wpływa na pozostałe. Pytania? Napisz do prof. K. Osei.",
+      "source": "pl"
+    },
+    {
+      "messages": "Д-р Дж. Р. Альварес прибыла ровно в 9:30 утра. «Отчёт готов?» — спросила она, взглянув на г-на Чена. Готов не был... даже близко.",
+      "source": "ru"
+    },
+    {
+      "messages": "ВВП вырос на 3,2% за последний квартал, превысив прогноз в 2,8%. Аналитики назвали это «на удивление сильным»... но предупредили о рисках. Продлится ли это?",
+      "source": "ru"
+    },
+    {
+      "messages": "Пожалуйста, проверьте пункты 1, 2 и 3 до пт. (т. е. до конца дня). Примечание: бюджет, персонал и график взаимосвязаны; задержка в одном влияет на остальные. Вопросы? Пишите проф. К. Осеи.",
+      "source": "ru"
+    },
+    {
+      "messages": "O Dr. J. R. Álvarez chegou às 9h30 em ponto. \"O relatório está pronto?\", perguntou ela, olhando para o Sr. Chen. Não estava... nem perto.",
+      "source": "pt"
+    },
+    {
+      "messages": "O PIB cresceu 3,2% no último trimestre, superando a previsão de 2,8%. Analistas chamaram isso de \"surpreendentemente forte\"... mas alertaram sobre riscos. Será que vai durar?",
+      "source": "pt"
+    },
+    {
+      "messages": "Revise os itens 1, 2 e 3 antes de sex. (ou seja, até o fim do dia). Obs.: orçamento, equipe e cronograma estão ligados; atraso em um afeta os outros. Dúvidas? Escreva ao Prof. K. Osei.",
+      "source": "pt"
+    },
+    {
+      "messages": "Dumating si Dr. J. R. Alvarez nang eksaktong 9:30 ng umaga. Tinanong niya si Mr. Chen, \"Handa na ba ang ulat?\" Hindi pa pala... malayo pa.",
+      "source": "tl"
+    },
+    {
+      "messages": "Lumago ang GDP nang 3.2% noong nakaraang quarter, mas mataas sa inaasahang 2.8%. Tinawag ito ng mga analyst na \"kagulat-gulat na malakas\"... ngunit binalaan din ang mga panganib. Magpapatuloy kaya ito?",
+      "source": "tl"
+    },
+    {
+      "messages": "Pakisuri ang bilang 1, 2, at 3 bago mag-Biy. (ibig sabihin, bago matapos ang araw). Paalala: magkakaugnay ang badyet, tauhan, at iskedyul; ang pagkaantala sa isa ay makakaapekto sa iba. May tanong? Mag-email kay Prop. K. Osei.",
+      "source": "tl"
+    },
+    {
+      "messages": "Tiến sĩ J. R. Alvarez đến đúng 9:30 sáng. Cô nhìn ông Chen và hỏi: \"Báo cáo xong chưa?\" Nó chưa xong... còn lâu mới xong.",
+      "source": "vi"
+    },
+    {
+      "messages": "GDP quý trước tăng 3,2%, vượt dự báo 2,8%. Các nhà phân tích gọi đây là mức tăng \"mạnh đến bất ngờ\"... nhưng cảnh báo về rủi ro. Liệu đà tăng này có kéo dài?",
+      "source": "vi"
+    },
+    {
+      "messages": "Vui lòng xem lại mục 1, 2 và 3 trước thứ Sáu (tức là trước cuối ngày). Lưu ý: ngân sách, nhân sự và tiến độ có liên quan với nhau; chậm trễ ở một mục sẽ ảnh hưởng đến các mục còn lại. Có thắc mắc? Hãy email cho GS. K. Osei.",
+      "source": "vi"
+    },
+    {
+      "messages": "阿尔瓦雷斯博士（J. R. Alvarez）上午9:30准时到达。她看着陈先生问道：\"报告准备好了吗？\"其实还没有……差得远呢。",
+      "source": "zh"
+    },
+    {
+      "messages": "上一季度GDP增长了3.2%，超过2.8%的预期。分析师称这一增长\"出人意料地强劲\"……但也警告存在风险。这种势头能持续吗？",
+      "source": "zh"
+    },
+    {
+      "messages": "请在周五（即今日下班前）之前审阅第1、2、3项。注：预算、人员和时间表相互关联；其中一项延误会影响其他项。有疑问？请联系奥塞教授（K. Osei）。",
+      "source": "zh"
+    }
+  ]
+}
